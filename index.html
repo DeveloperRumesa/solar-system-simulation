@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar System – Computer Graphics Project</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+        /* Ensure the body takes up full screen to prevent click offsets */
+        width: 100vw;
+        height: 100vh;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/controls/OrbitControls.js"></script>
+  </head>
+  <body>
+    <div
+      id="info-box"
+      style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 15px;
+        border: 1px solid #ffcc00;
+        display: none;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        z-index: 100;
+        pointer-events: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateY(-10px);
+      "
+    >
+      <h2 id="info-title" style="margin-top: 0; color: #ffcc00"></h2>
+      <p id="info-text"></p>
+      <small style="color: #aaa">Click into space to reset view</small>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
